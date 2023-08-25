@@ -3,53 +3,26 @@ $(document).ready(function(){
     //윈도우 시작하면 화면 맨위로 이동
     $("html,body").stop().animate({"scrollTop":0}, 1500, "swing");
 
-/*
-    var contht1 = $("#content1").height();
-    var contht2 = $("#content2").height();
-    var contht3 = $("#content3").height();
-    var contht4 = $("#content4").height();
-    var contht5 = $("#content5").height();
-    var contht6 = $("#content6").height();
-    var contht7 = $("#content7").height();
-    var contht8 = $("#content8").height();
-    var contht9 = $("#content9").height();
-    var contht10 = $("#content10").height();
-*/
 
-    //브라우저의 높이값을 div의 높이값으로
-    var ht = $(window).height();
-    $("#container > div").height(ht);
+let ht1 = 1080;
+let ht2 = 952 + ht1;
+let ht3 = 811 + ht2;
+let ht4 = 890 + ht3;
+let ht5 = 1243 + ht4;
+let ht6 = 1243 + ht5;
+let ht7 = 1356 + ht6;
+let ht8 = 1022 + ht7;
+let ht9 = 1457 + ht8;
+let ht10 = 1080 + ht9;
 
-    $(window).resize(function(){
-        var ht = $(window).height();
-        $("#container > div").height(ht);
-    });
+    $("#content1 > section").addClass("on");
 
-    var start = setTimeout(function(){
-        $("#content1 > section").addClass("on");
-    },500);
-
-/*
-#content1{min-height: 1080px;}
-#content2{min-height: 952px;}
-#content3{min-height: 811px;}
-#content4{min-height: 890px;}
-#content5{min-height: 1243px;}
-#content6{min-height: 1243px;}
-#content7{min-height: 1356px;}
-#content8{min-height: 1022px;}
-#content9{min-height: 1457px;}
-#content10{min-height: 1080px;}
-*/
-
-
-    
     $(window).scroll(function(){
         var scroll = $(this).scrollTop();//현재scroll위치값
         var ht = $(window).height();
 
        //content1 
-        if(scroll >= 0*ht && scroll  < 1*ht){
+        if(scroll >= 0*ht1 && scroll  < ht1){
             //내용물 움직임 시작
             $("#content1 > section").addClass("on");
         }else{
@@ -58,63 +31,63 @@ $(document).ready(function(){
         }
         
         //content2 
-        if(scroll >= 1*ht && scroll  < 2*ht){
+        if(scroll >= ht1 && scroll  < ht2){
             $("#content2 > section").addClass("on");
         }else{
             $("#content2 > section").removeClass("on");
         }
         
         //content3 
-        if(scroll >= 2*ht && scroll  < 3*ht){
+        if(scroll >= ht2-400 && scroll  < ht3){
             $("#content3 > section").addClass("on");
         }else{
             $("#content3 > section").removeClass("on");
         }
 
         //content4 
-        if(scroll >= 3*ht && scroll  < 4*ht){
+        if(scroll >= ht3-300 && scroll  < ht4){
             $("#content4 > section").addClass("on");
         }else{
             $("#content4 > section").removeClass("on");
         }
 
         //content5
-        if(scroll >= 4*ht && scroll  < 5*ht){
+        if(scroll >= ht4-500 && scroll  < ht5){
             $("#content5 > section").addClass("on");
         }else{
             $("#content5 > section").removeClass("on");
         }
 
         //content6 
-        if(scroll >= 5*ht && scroll  < 6*ht){
+        if(scroll >= ht5-200 && scroll  < ht6){
             $("#content6 > section").addClass("on");
         }else{
             $("#content6 > section").removeClass("on");
         }
         
         //content7 
-        if(scroll >= 6*ht && scroll  < 7*ht){
+        if(scroll >= ht6-200 && scroll  < ht7){
             $("#content7 > section").addClass("on");
         }else{
             $("#content7 > section").removeClass("on");
         }
         
         //content8 
-        if(scroll >= 7*ht && scroll  < 8*ht){
+        if(scroll >= ht7 && scroll  < ht8){
             $("#content8 > section").addClass("on");
         }else{
             $("#content8 > section").removeClass("on");
         }
 
         //content9 
-        if(scroll >= 8*ht && scroll  < 9*ht){
+        if(scroll >= ht8 && scroll  < ht9){
             $("#content9 > section").addClass("on");
         }else{
             $("#content9 > section").removeClass("on");
         }
 
         //content10 
-        if(scroll >= (9*ht)+300 && scroll  < (10*ht)+500){
+        if(scroll >= ht9 && scroll  < ht10){
             $("#content10 > section").addClass("on");
         }else{
             $("#content10 > section").removeClass("on");
